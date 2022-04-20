@@ -36,7 +36,7 @@ const ItemPage = () => {
                     </>
                     : <CircularProgress />
             }
-            <button onClick={() => navigate('/')}>Назад</button>
+            <button onClick={() => navigate('/gallery')}>Назад</button>
         </Stack >
     )
 }

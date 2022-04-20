@@ -23,7 +23,7 @@ const Header = () => {
                             vadim.hugaev@mail.ru
                         </Navbar.Text>
                     </Nav.Item>
-                    <Nav.Link as={Link} to={"/"} >Галерея</Nav.Link>
+                    <Nav.Link as={Link} to={"/gallery"} >Галерея</Nav.Link>
                     <Nav.Link as={Link} to={"/about"}>Обо мне</Nav.Link>
                 </Navbar.Collapse>
             </Navbar>

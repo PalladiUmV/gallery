@@ -15,7 +15,7 @@ const MainItems = () => {
             {
                 loading ? <CircularProgress /> :
                     data.map(item =>
-                        <Item onClick={(item) => navigate('/' + (item.id - 1))} key={item.title} item={item} />
+                        <Item onClick={(item) => navigate('/gallery/' + (item.id - 1))} key={item.title} item={item} />
                     )
             }
         </div>
