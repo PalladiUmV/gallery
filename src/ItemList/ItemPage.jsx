@@ -25,10 +25,10 @@ const ItemPage = () => {
                     <>
                         <h1> Страница фото c id: {picture?.id} </h1>
                         <div>
-                            <span style={{ color: 'red' }}>Title: </span> {picture?.title}
+                            <span className="me-2 text-danger">Title: </span> {picture?.title}
                         </div>
                         <div>
-                            <span style={{ color: 'red' }}>URL: </span>{picture?.url}
+                            <span className="m-2 text-danger">URL: </span>{picture?.url}
                         </div>
                         <div>
                             <img src={picture?.url} alt="" width="100px" height="100px" />

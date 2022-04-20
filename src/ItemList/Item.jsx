@@ -9,4 +9,4 @@ const Item = ({ item, onClick }) => {
     )
 }
 
-export default Item
+export default Item;

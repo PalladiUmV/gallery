@@ -15,7 +15,7 @@ const reducer = (state = initialState, action) => {
         case 'FETCH_DATA_SUCCESS':
             return {
                 ...state,
-                data: action.payload,
+                data: [...state.data, ...action.payload],
                 loading: false
             };
         case 'GET_PICTURE_ITEM':
