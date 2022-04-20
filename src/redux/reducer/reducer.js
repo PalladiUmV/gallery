@@ -1,6 +1,7 @@
 const initialState = {
     data: [],
     loading: true,
+    picture: 0
 }
 
 const reducer = (state = initialState, action) => {
@@ -14,6 +15,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 data: action.payload,
+                loading: false
+            };
+        case 'GET_PICTURE_ITEM':
+            return {
+                ...state,
+                picture: action.payload,
                 loading: false
             };
         default:

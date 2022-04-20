@@ -2,8 +2,8 @@ import axios from 'axios';
 import { takeEvery, put, call, fork, all } from 'redux-saga/effects'
 
 
-async function getData(a = 0) {
-    const request = await axios.get(`https://jsonplaceholder.typicode.com/photos?_start=${a}&_limit=24`);
+async function getData(a = 0, b = 24) {
+    const request = await axios.get(`https://jsonplaceholder.typicode.com/photos?_start=${a}&_limit=${b}`);
     return request.data;
 }
 
@@ -18,8 +18,8 @@ function* changeData(action) {
 
     yield put({ type: 'FETCH_DATA_REQUEST' });
 
-    const data = yield call(getData, action.payload);
-    yield put({ type: 'FETCH_DATA_SUCCESS', payload: data });
+    const data = yield call(getData, action.payload, 1);
+    yield put({ type: 'GET_PICTURE_ITEM', payload: data });
 };
 
 
@@ -29,7 +29,7 @@ export default function* watcherSaga() {
         fork(initialFetchRequest)
     ]);
 
-    yield takeEvery('CHANGE_DATA', changeData)
+    yield takeEvery('GET_PICTURE', changeData)
 };
 
 
