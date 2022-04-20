@@ -9,6 +9,34 @@
     margin-top: 3rem;
 }
 
+.item {
+    position: relative;
+}
+
 .item:hover {
+    transition-duration: 0.5s;
     background-color: white;
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.item:hover::after {
+    content: 'Подробнее';
+    position: absolute;
+    background-color: white;
+    color: black;
+    top: 35px;
+    left: 0;
+    transition: all 1s;
+    width: 100%;
+    height: 30px;
+    text-align: center;
 }

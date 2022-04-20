@@ -25,7 +25,6 @@ function* changeData(action) {
 };
 
 
-
 export default function* watcherSaga() {
     yield all([
         fork(initialFetchRequest)

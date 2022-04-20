@@ -1,7 +1,5 @@
 const initialState = {
-    data: [
-        {}
-    ],
+    data: [],
     loading: true,
     picture: 0
 }
@@ -11,7 +9,7 @@ const reducer = (state = initialState, action) => {
         case 'FETCH_DATA_REQUEST':
             return {
                 ...state,
-                picture: 0,
+                picture: [],
                 loading: true
             };
         case 'FETCH_DATA_SUCCESS':

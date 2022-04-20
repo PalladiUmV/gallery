@@ -3,12 +3,14 @@ import React, { useEffect } from 'react'
 import { Stack } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 
 const ItemPage = () => {
-    const params = useParams();
+    const params = useParams()
+    const navigate = useNavigate()
     const picture = useSelector(state => state.picture[0])
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
     useEffect(() => {
         dispatch({
             type: "GET_PICTURE",
@@ -34,6 +36,7 @@ const ItemPage = () => {
                     </>
                     : <CircularProgress />
             }
+            <button onClick={() => navigate('/')}>Назад</button>
         </Stack >
     )
 }
