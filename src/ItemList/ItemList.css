@@ -8,3 +8,7 @@
     gap: 10px;
     margin-top: 3rem;
 }
+
+.item:hover {
+    background-color: white;
+}
